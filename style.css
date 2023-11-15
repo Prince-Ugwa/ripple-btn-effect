@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: navy;
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  display: block;
+  background-color: pink;
+  color: black;
+  padding: 20px 42px;
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 8px rgba(228, 192, 15, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: orangered;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
+}
+button:hover {
+  color: white;
+}
+button:hover::before {
+  width: 300px;
+  height: 300px;
+  color: whitesmoke;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
